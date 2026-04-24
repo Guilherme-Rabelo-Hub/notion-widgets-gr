@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* O "Mapa da Mina" - Estética Apple Minimalista */
+        :root {
+            --bg-color: #121212; /* Fundo igual ao do Notion Dark */
+            --track-color: #252525; /* Cor do trilho da barra */
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            
+            /* Suas Cores do Mockup */
+            --color-autonomo: #a38cf4;  /* Roxo */
+            --color-producao: #4ade80;  /* Verde */
+            --color-pericia: #fb923c;   /* Laranja */
+            --color-avaliacao: #60a5fa; /* Azul */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .gantt-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-row {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .project-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #888;
+        }
+
+        /* A Barra Apple-Style */
+        .progress-track {
+            width: 100%;
+            height: 6px; /* Bem fina como no mockup */
+            background-color: var(--track-color);
+            border-radius: 999px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Classes de cores */
+        .bg-autonomo { background-color: var(--color-autonomo); }
+        .bg-producao { background-color: var(--color-producao); }
+        .bg-pericia { background-color: var(--color-pericia); }
+        .bg-avaliacao { background-color: var(--color-avaliacao); }
+
+    </style>
+</head>
+<body>
+
+    <div class="gantt-container">
+        <div class="project-row">
+            <div class="project-label">Projeto Autônomo - Design Mockup</div>
+            <div class="progress-track">
+                <div class="progress-fill bg-autonomo" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-label">Perícia Judicial - Proc. 001</div>
+            <div class="progress-track">
+                <div class="progress-fill bg-pericia" style="width: 40%;"></div>
+            </div>
+        </div>
+
+        <div class="project-row">
+            <div class="project-label">Festival Convida - Montagem</div>
+            <div class="progress-track">
+                <div class="progress-fill bg-producao" style="width: 90%;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
